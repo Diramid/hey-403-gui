@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey403</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="main">
+    <h1 class="headtitle">Hey403</h1>
+    <form>
+      <label for="domain" class="domainlabel">Domain:</label>
+      <input id="domain" type="text" placeholder="https://www.example.com" class="domaininput">
+      <button type="submit" class="submitbutton">Check</button>
+    </form>
+    <div class="status-section">
+      <h2 class="statuslabel">Status:</h2>
+      <h2 class="dnslabel">DNS:</h2>
+    </div>
+    <h3 class="guidlabel">Choose a DNS from the list and click connect:</h3>
+    <div class="listdns"></div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

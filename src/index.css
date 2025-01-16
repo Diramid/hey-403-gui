@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #3b6df6;
+    color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #main {
+    width: 100%;
+    max-width: 560px;
+    height: 100%;
+    max-height: 560px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .headtitle {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #3b82f6;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .domainlabel {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .domaininput {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background: #f9fafb;
+    color: #374151;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .domaininput:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  
+  .submitbutton {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .submitbutton:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    transform: scale(1.02);
+  }
+  
+  .status-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .statuslabel, .dnslabel {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+    margin-right: 210px;
+  }
+  
+  .guidlabel {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 10px;
+  }
+  
+  .listdns {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b7280;
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+  .listdns::before {
+    content: "No DNS data available.";
+  }
+  
