@@ -12,5 +12,6 @@
   "description": "",
   "dependencies": {
     "electron": "^34.0.0"
-  }
+  },
+  "type": "commonjs"
 }

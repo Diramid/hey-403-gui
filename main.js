@@ -1,4 +1,16 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
+
+const path = require('path');
+const DNSFileCheck = require('./src/DNSFileCheck');
+
+ipcMain.handle('getdns', async () => {
+  try {
+    return await DNSFileCheck();
+  } catch (err) {
+    return err.message;
+  }
+  
+});
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -6,6 +18,7 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js'), // Enable preload script
     },
   });
   win.setMenuBarVisibility(false)
