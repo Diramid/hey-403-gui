@@ -1,29 +1,40 @@
+const { exec } = require('child_process');
 const { app, BrowserWindow, ipcMain } = require('electron');
-
 const path = require('path');
-const DNSFileCheck = require('./src/DNSFileCheck');
-
-ipcMain.handle('getdns', async () => {
-  try {
-    return await DNSFileCheck();
-  } catch (err) {
-    return err.message;
-  }
-  
-});
+const os = require('os');
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 600,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
-      preload: path.join(__dirname, 'preload.js'), // Enable preload script
+      contextIsolation: true,
+      nodeIntegration: false,
+      preload: path.join(__dirname, 'preload.js'),
     },
   });
-  win.setMenuBarVisibility(false)
+
+  win.setMenuBarVisibility(false);
   win.loadFile('src/index.html');
 }
+
+ipcMain.on('setdns', (event, command) => { 
+  exec(command, (err, stdout, stderr) => {
+    if (err) {
+      event.reply('command-output', `Error: ${err.message}`);
+      return;
+    }
+    if (stderr) {
+      event.reply('command-output', `Stderr: ${stderr}`);
+      return;
+    }
+    event.reply('command-output', stdout);
+  });
+});
+
+ipcMain.handle('getos', async () => {
+  return os.platform();
+});
 
 app.whenReady().then(createWindow);
 

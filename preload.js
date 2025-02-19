@@ -1,6 +1,7 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
-// Expose a safe function for the renderer to call
 contextBridge.exposeInMainWorld('electron', {
-  getdns: () => ipcRenderer.invoke('getdns')
+    setdns: (cmd) => ipcRenderer.send('setdns', cmd),
+    onCommandOutput: (callback) => ipcRenderer.on('command-output', (event, data) => callback(data)),
+    getos: () => ipcRenderer.invoke('getos')
 });
