@@ -45,8 +45,30 @@ We’ve got pre-built binaries for you—no compile struggles needed! Head to ou
 1. Hit up [Releases](https://github.com/Diramid/hey-403-gui/releases).
 2. Download your flavor:
    - **Windows**: `.msi` installer (click and go!).
-   - **Linux**: Binary file for your distro.
-3. Install, launch, and start testing domains! ✨
+
+<h2>Linux</h2>
+
+1. Extract the archive:
+```bash
+tar -xzvf hey403-gui-v1.2.0.tar.gz
+```
+2. Go to extracted directory:
+```bash
+cd ./hey403
+```
+3. Give permission to install script and run script:
+```bash
+chmod +x install.sh
+chmod +x run.sh
+
+sudo ./install.sh
+```
+4. Run the script and done ! :
+```bash
+sudo ./run.sh
+```
+
+5. Install, launch, and start testing domains! ✨
 
 ### Build from Source (Optional)
 1. **Prerequisites**: C++ compiler (e.g., GCC, MSVC), CMake 3.15+, and Git.
