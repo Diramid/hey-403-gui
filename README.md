@@ -1,66 +1,115 @@
+<h1 align="center">
+  🌐 Hey403 GUI
+  <br>
+  <sub>⚡ DNS Testing with a Fast C++ Desktop App ⚡</sub>
+</h1>
+
+<div align="center">
+
+[![Stars](https://img.shields.io/github/stars/Diramid/hey-403-gui?logo=starship&color=gold)](https://github.com/Diramid/hey-403-gui/stargazers)
+[![Forks](https://img.shields.io/github/forks/Diramid/hey-403-gui?logo=git&color=9cf)](https://github.com/Diramid/hey-403-gui/forks)
+[![Issues](https://img.shields.io/github/issues/Diramid/hey-403-gui?logo=github&color=red)](https://github.com/Diramid/hey-403-gui/issues)
+[![License](https://img.shields.io/github/license/Diramid/hey-403-gui?logo=open-source-initiative&color=green)](https://github.com/Diramid/hey-403-gui/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/Diramid/hey-403-gui?style=flat)](https://github.com/Diramid/hey-403-gui/graphs/contributors)
+
+</div>
+
 ---
 
-# 🌐 Hey 403
+## 📖 What is Hey403 GUI?
+**Hey403 GUI** is a blazing-fast desktop app written in **C++** to test domain accessibility across multiple DNS providers. Ditch the terminal and get sleek, clickable DNS diagnostics—perfect for devs, admins, or anyone who digs a solid GUI! 🚀
 
-[![GitHub Stars](https://img.shields.io/github/stars/Mohammad222PR/Hey-403?style=flat&logo=github)](https://github.com/Mohammad222PR/Hey-403)
-[![GitHub Forks](https://img.shields.io/github/forks/Mohammad222PR/Hey-403?style=flat&logo=github)](https://github.com/Mohammad222PR/Hey-403)
-[![GitHub Issues](https://img.shields.io/github/issues/Mohammad222PR/Hey-403?style=flat&logo=github)](https://github.com/Mohammad222PR/Hey-403/issues)
-[![MIT License](https://img.shields.io/github/license/Mohammad222PR/Hey-403?style=flat)](https://github.com/Mohammad222PR/Hey-403/blob/main/LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/Mohammad222PR/Hey-403?style=flat)](https://github.com/Mohammad222PR/Hey-403/graphs/contributors)
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/Mohammad222PR/Hey-403?style=flat)](https://github.com/Mohammad222PR/Hey-403)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/Mohammad222PR/Hey-403?style=flat)](https://github.com/Mohammad222PR/Hey-403/commits/main)
-
-**Hey 403** is a cutting-edge tool with a sleek **Electron.js**-based GUI designed to test domain accessibility using multiple DNS providers. With just a few clicks, you can identify which DNS servers establish a successful connection with your desired domain. 🚀
+### Why Hey403 GUI?
+- ⚡ **Super Fast**: C++ power means lightning-quick results.
+- 🌍 **Global DNS**: Test 15+ providers with ease.
+- 🔧 **No Fuss**: Simple, visual troubleshooting.
+- 🖥️ **Cross-Platform**: Windows and Linux ready (more to come!).
 
 ---
 
 ## ✨ Features
-
-- **Interactive GUI**: Powered by **Electron.js**, providing a modern and intuitive interface.  
-- **Multiple DNS Testing**: Identify DNS providers connecting successfully to your domain.  
-- **Fast and Accurate Results**: Get precise and organized output in seconds.  
-- **Custom DNS Options**: Add your preferred DNS providers effortlessly.  
-- **Cross-Platform Support**: Works seamlessly on Windows, macOS, and Linux.  
-
----
-
-## 🤔 Why Hey 403?
-
-Struggling with domain connectivity issues? With **Hey 403**, you can visualize DNS configurations and troubleshoot errors quickly and efficiently. It’s the ultimate companion for developers, admins, and anyone managing web infrastructure. 🛠️
+| Feature              | Description                              |
+|----------------------|------------------------------------------|
+| 🎨 **Native GUI**    | Clean, fast C++ interface.               |
+| 🌐 **Multi-DNS**     | Check tons of DNS providers at once.     |
+| ⚡ **Speedy Results**| Accurate output in a flash.              |
+| 🔍 **Custom DNS**    | Add your own servers like a boss.        |
+| 💻 **Cross-Platform**| Runs on Windows and Linux.               |
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Get Started
+We’ve got pre-built binaries for you—no compile struggles needed! Head to our [Releases page](https://github.com/Diramid/hey-403-gui/releases) and grab the goods.
 
-1. Ensure you have **Node.js** and **Python 3.7+** installed.  
-2. Clone the repository:  
+### Install It
+1. Hit up [Releases](https://github.com/Diramid/hey-403-gui/releases).
+2. Download your flavor:
+   - **Windows**: `.msi` installer (click and go!).
+   - **Linux**: Binary file for your distro.
+3. Install, launch, and start testing domains! ✨
+
+### Build from Source (Optional)
+1. **Prerequisites**: C++ compiler (e.g., GCC, MSVC), CMake 3.15+, and Git.
+2. Clone it:
    ```bash
-   git clone https://github.com/Mohammad222PR/Hey-403.git
-   ```  
-3. Navigate to the project directory and install dependencies:  
+   git clone https://github.com/Diramid/hey-403-gui.git
+   ```
+3. Build it:
    ```bash
-   npm install
-   ```  
-4. Start the app:  
-   ```bash
-   npm start
-   ```  
-5. Input the domain you want to test and explore the results in the interactive GUI! ✨  
+   cd hey-403-gui
+   mkdir build && cd build
+   cmake ..
+   cmake --build .
+   ```
+4. Run it:
+   - Windows: `.\Debug\hey403-gui.exe`
+   - Linux: `./hey403-gui`
+
+---
+
+## 🔧 Usage Tips
+- **Test a Domain**: Pop in the domain and hit "Test."
+- **Add DNS**: Throw in custom DNS servers via the GUI.
+- **Check Results**: See what works and what doesn’t—easy peasy.
 
 ---
 
 ## 🤝 Contributing
+Wanna tweak this C++ beast? Jump in!
+1. Fork it 🍴
+2. Set up:
+   ```bash
+   git clone https://github.com/Diramid/hey-403-gui.git
+   cd hey-403-gui
+   ```
+3. Build & test:
+   ```bash
+   mkdir build && cd build
+   cmake .. && cmake --build .
+   ```
+4. Push & PR:
+   ```bash
+   git checkout -b feature/epic-stuff
+   git commit -m "Add epic stuff"
+   git push origin feature/epic-stuff
+   ```
+5. Open a PR on [GitHub](https://github.com/Diramid/hey-403-gui/pulls)
 
-Your contributions make this project better! Whether it’s bug fixes, feature suggestions, or new ideas, we’d love your input. Check out the [Contributing Guidelines](./CONTRIBUTING.md) for details. 🧑‍💻
+See [Contributing Guide](CONTRIBUTING.md) for more!
 
 ---
 
-## 📜 License
+## ⚖️ License
+Open-source under the [MIT License](LICENSE). Hack it, share it—just keep it legit!
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+---
+
+## 🌟 Show Your Support
+- ⭐ Star us on [GitHub](https://github.com/Diramid/hey-403-gui)!
+- 🐛 Got bugs? Hit [Issues](https://github.com/Diramid/hey-403-gui/issues).
+- 💬 Tell us how you roll with it—we’re listening!
 
 ---
 
-🚨 **Note**: This tool is for educational and troubleshooting purposes. Always use it responsibly.
-
----
+> **Heads Up!** 📢  
+> Made for troubleshooting fun. Use it responsibly!
